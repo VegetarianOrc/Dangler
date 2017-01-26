@@ -15,6 +15,8 @@ import com.amazzeo.dangler.speechutils._
 
 class DanglerSpeechlet extends Speechlet {
 
+  val danglerManager = DanglerManager()
+
   def logInvocation(name:String, request: SpeechletRequest, session: Session) = {
     println(s"${name} requestID=${request.getRequestId} sessionId=${session.getSessionId}")
   }
@@ -34,9 +36,17 @@ class DanglerSpeechlet extends Speechlet {
   override def onIntent(request: IntentRequest, session: Session): SpeechletResponse = {
     logInvocation("onIntent", request, session)
 
-    val outputSpeech = new PlainTextOutputSpeech("Hello world")
+    val intent = request.getIntent
 
-    new SpeechletResponse(outputSpeech)
+    intent.getName match {
+      case "StartDangling" =>
+        danglerManager.getStartDanglingIntentResponse(intent)
+
+      case _ =>
+        throw new IllegalArgumentException("Unrecognized intent: " + intent.getName())
+    }
+
+
   }
 
   override def onSessionEnded(request: SessionEndedRequest, session: Session): Unit = {

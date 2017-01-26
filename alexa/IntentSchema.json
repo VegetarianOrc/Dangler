@@ -1,0 +1,17 @@
+{
+  "intents": [
+    {
+      "intent": "StartDangling",
+      "slots": [
+        {
+          "name": "interval",
+          "type": "AMAZON.DURATION"
+        },
+        {
+          "name": "duration",
+          "type": "AMAZON.DURATION"
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,8 @@ class DanglerSequence(interval: FiniteDuration, duration: FiniteDuration) {
     BreakNodes.XStrongBreakNode(1.second),
     Node("2"),
     BreakNodes.XStrongBreakNode(1.second),
-    Node("1")
+    Node("1"),
+    BreakNodes.XStrongBreakNode(1.second)
     )
 
   val ENDING = Seq(BreakNodes.XStrongBreakNode(1.second), Node("Workout ended."))

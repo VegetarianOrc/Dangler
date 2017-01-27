@@ -1,4 +1,14 @@
 StartDangling start with a {interval} interval for {duration}
+StartDangling start with a {interval} interval for {duration} duration
 StartDangling start {interval} interval and {duration}
+StartDangling start {interval} interval and {duration} duration
 StartDangling start {interval} and {duration}
+StartDangling to start with a {interval} and {duration}
+StartDangling to start with a {interval} interval and {duration}
+StartDangling to start with a {interval} interval and {duration} duration
+StartDangling to start with a {interval} and {duration} duration
+StartDangling to start with {interval} and {duration}
+StartDangling to start with {interval} interval and {duration}
+StartDangling to start with {interval} interval and {duration} duration
+StartDangling to start with {interval} and {duration} duration
 StartDangling {interval} and {duration}
